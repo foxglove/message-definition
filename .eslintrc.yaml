@@ -1,0 +1,12 @@
+env:
+  es2020: true
+
+extends:
+  - plugin:@foxglove/base
+
+overrides:
+  - files: ["*.ts", "*.tsx"]
+    extends:
+      - plugin:@foxglove/typescript
+    parserOptions:
+      project: ./tsconfig.json
