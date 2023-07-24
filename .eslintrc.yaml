@@ -1,6 +1,9 @@
 env:
   es2020: true
 
+ignorePatterns:
+  - dist
+
 extends:
   - plugin:@foxglove/base
 

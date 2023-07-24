@@ -31,6 +31,7 @@
     "src"
   ],
   "scripts": {
+    "build": "tsc",
     "lint:ci": "eslint --report-unused-disable-directives .",
     "lint": "eslint --report-unused-disable-directives --fix .",
     "prepublishOnly": "yarn lint:ci"
@@ -45,6 +46,7 @@
     "eslint-plugin-filenames": "1.3.2",
     "eslint-plugin-import": "2.27.5",
     "eslint-plugin-prettier": "4.2.1",
-    "prettier": "2.8.4"
+    "prettier": "2.8.4",
+    "typescript": "^5.1.6"
   }
 }
