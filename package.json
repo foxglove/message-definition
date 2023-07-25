@@ -25,17 +25,20 @@
     "email": "contact@foxglove.dev"
   },
   "homepage": "https://github.com/foxglove/message-definition",
-  "main": "src/index.js",
-  "typings": "src/index.d.ts",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "files": [
+    "dist",
     "src"
   ],
   "scripts": {
-    "build": "tsc",
-    "test": "jest",
+    "build": "yarn clean && tsc -b ./tsconfig.build.json",
+    "clean": "rm -rf dist tsconfig.build.tsbuildinfo",
     "lint:ci": "eslint --report-unused-disable-directives .",
     "lint": "eslint --report-unused-disable-directives --fix .",
-    "prepublishOnly": "yarn lint:ci"
+    "prepack": "yarn build",
+    "prepublishOnly": "yarn lint:ci",
+    "test": "jest"
   },
   "devDependencies": {
     "@foxglove/eslint-plugin": "0.21.0",
