@@ -1,5 +1,13 @@
 import { MessageDefinition, MessageDefinitionField } from "./types";
 
+/**
+ * Compares two MessageDefinitionField objects for equality. Two fields are considered equal if all
+ * their properties are equal. Assumes default values for boolean properties that are undefined.
+ *
+ * @param lhs MessageDefinitionField field
+ * @param rhs MessageDefinitionField field to compare with
+ * @returns True if the two fields are equal, false otherwise.
+ */
 export function isMsgDefFieldEqual(
   lhs: MessageDefinitionField,
   rhs: MessageDefinitionField,
@@ -19,6 +27,14 @@ export function isMsgDefFieldEqual(
   );
 }
 
+/**
+ * Compares two MessageDefinition objects for equality. Two message definitions are considered
+ * equal if their name (if given) and all their definitions equal.
+ *
+ * @param lhs MessageDefinition message definition
+ * @param rhs MessageDefinition message definition to compare with
+ * @returns True if the two message definitions are equal, false otherwise.
+ */
 export function isMsgDefEqual(lhs: MessageDefinition, rhs: MessageDefinition): boolean {
   return (
     (lhs.name == undefined || rhs.name == undefined || lhs.name === rhs.name) &&
