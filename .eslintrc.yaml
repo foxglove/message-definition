@@ -1,8 +1,15 @@
 env:
   es2020: true
 
+ignorePatterns:
+  - dist
+
+plugins:
+  - jest
+
 extends:
   - plugin:@foxglove/base
+  - plugin:@foxglove/jest
 
 overrides:
   - files: ["*.ts", "*.tsx"]

@@ -1,13 +1,23 @@
 {
   "include": ["./src/**/*.ts"],
   "compilerOptions": {
-    "noEmit": true,
+    "module": "commonjs",
+    "target": "es2020",
     "lib": ["es2020"],
     "rootDir": "./src",
+    "outDir": "./dist",
 
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "allowJs": false,
     "newLine": "lf",
-    "skipLibCheck": false,
-    "allowJs": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
 
     // be as strict as possible, but no stricter
     "strict": true,
