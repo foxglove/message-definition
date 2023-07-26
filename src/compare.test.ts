@@ -1,5 +1,5 @@
+import { isMsgDefEqual } from "./compare";
 import { MessageDefinition } from "./types";
-import { isMsgDefEqual } from "./utils";
 
 describe("isMsgDefEqual", () => {
   it("Should return true for definition for same msg parsed from .msg and .idl", () => {
