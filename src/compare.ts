@@ -2,7 +2,7 @@ import { MessageDefinition, MessageDefinitionField } from "./types";
 
 /**
  * Compares two MessageDefinitionField objects for equality. Two fields are considered equal if all
- * their properties are equal. Assumes default values for boolean properties that are undefined.
+ * their properties are equal. Assumes default values (False) for boolean properties that are undefined.
  *
  * @param lhs MessageDefinitionField field
  * @param rhs MessageDefinitionField field to compare with
