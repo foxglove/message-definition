@@ -60,4 +60,40 @@ describe("isMsgDefEqual", () => {
     };
     expect(isMsgDefEqual(definition1, definition2)).toBe(false);
   });
+
+  it("should return true for matching array default values", () => {
+    const definition1: MessageDefinition = {
+      name: "definition",
+      definitions: [
+        { type: "string", isArray: true, name: "field1", defaultValue: ["a", "b"] },
+        { type: "number", isArray: true, name: "field2", defaultValue: [1, 2] },
+      ],
+    };
+    const definition2: MessageDefinition = {
+      name: "definition",
+      definitions: [
+        { type: "string", isArray: true, name: "field1", defaultValue: ["a", "b"] },
+        { type: "number", isArray: true, name: "field2", defaultValue: [1, 2] },
+      ],
+    };
+    expect(isMsgDefEqual(definition1, definition2)).toBe(true);
+  });
+
+  it("should return false for different array default values", () => {
+    const definition1: MessageDefinition = {
+      name: "definition",
+      definitions: [
+        { type: "string", isArray: true, name: "field1", defaultValue: ["a", "b"] },
+        { type: "number", isArray: true, name: "field2", defaultValue: [1, 2] },
+      ],
+    };
+    const definition2: MessageDefinition = {
+      name: "definition",
+      definitions: [
+        { type: "string", isArray: true, name: "field1", defaultValue: ["a", "b"] },
+        { type: "number", isArray: true, name: "field2", defaultValue: [1, 3] },
+      ],
+    };
+    expect(isMsgDefEqual(definition1, definition2)).toBe(false);
+  });
 });

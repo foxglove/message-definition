@@ -1,4 +1,28 @@
-import { MessageDefinition, MessageDefinitionField } from "./types";
+import { DefaultValue, MessageDefinition, MessageDefinitionField } from "./types";
+
+/**
+ * Deep equality comparison of two DefaultValue values. Two default values are considered equal
+ * if they are both arrays and all their elements are equal, or if they are both primitives and
+ * equal.
+ *
+ * @param lhs Left-hand side of the comparison.
+ * @param rhs Right-hand side of the comparison.
+ * @returns True if the two default values are equal, false otherwise.
+ */
+function defaultValuesEqual(lhs: DefaultValue, rhs: DefaultValue): boolean {
+  if (Array.isArray(lhs) && Array.isArray(rhs)) {
+    if (lhs.length !== rhs.length) {
+      return false;
+    }
+    for (let i = 0; i < lhs.length; i++) {
+      if (lhs[i] !== rhs[i]) {
+        return false;
+      }
+    }
+    return true;
+  }
+  return lhs === rhs;
+}
 
 /**
  * Compares two MessageDefinitionField objects for equality. Two fields are considered equal if all
@@ -23,7 +47,7 @@ export function isMsgDefFieldEqual(
     lhs.valueText === rhs.valueText &&
     lhs.upperBound === rhs.upperBound &&
     lhs.arrayUpperBound === rhs.arrayUpperBound &&
-    lhs.defaultValue === rhs.defaultValue
+    defaultValuesEqual(lhs.defaultValue, rhs.defaultValue)
   );
 }
 
