@@ -40,6 +40,7 @@ export function isMsgDefFieldEqual(
     lhs.type === rhs.type &&
     lhs.name === rhs.name &&
     (lhs.isComplex ?? false) === (rhs.isComplex ?? false) &&
+    lhs.enumName === rhs.enumName &&
     (lhs.isArray ?? false) === (rhs.isArray ?? false) &&
     lhs.arrayLength === rhs.arrayLength &&
     (lhs.isConstant ?? false) === (rhs.isConstant ?? false) &&
