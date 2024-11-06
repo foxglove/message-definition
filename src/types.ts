@@ -58,10 +58,10 @@ export type MessageDefinitionField = {
    */
   isComplex?: boolean;
   /**
-   * Name of an enumeration associated with this field. The field should contain a primitive value
-   * (`isComplex !== true`).
+   * Name of an enumeration type associated with this field. The field should contain a primitive
+   * value (`isComplex !== true`).
    */
-  enumName?: string;
+  enumType?: string;
 
   /**
    * Set to true if this field is an array. For example, the following Protobuf
