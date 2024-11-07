@@ -57,6 +57,11 @@ export type MessageDefinitionField = {
    * primitive type, a custom struct).
    */
   isComplex?: boolean;
+  /**
+   * Name of an enumeration type associated with this field. The field should contain a primitive
+   * value (`isComplex !== true`).
+   */
+  enumType?: string;
 
   /**
    * Set to true if this field is an array. For example, the following Protobuf
@@ -122,6 +127,7 @@ export type MessageDefinitionField = {
    * Would be represented as:
    * ```typescript
    * { type: "bool", name: "ALIVE", isConstant: true, value: true, valueText: "True" }
+   * ```
    */
   valueText?: string;
 
