@@ -1,10 +1,12 @@
 # @foxglove/message-definition
 
+[![@foxglove/message-definition on npm](https://shields.io/npm/v/@foxglove/message-definition)](https://www.npmjs.com/package/@foxglove/message-definition)
+
 > Defines common TypeScript types for message definition schemas (ROS .msg, Protobuf, FlatBuffers, IDL, PX4 ULog, JSON Schema, etc).
 
 ## Why is this useful?
 
-Several interface definition languages exist today for describing the structure of messages. These languages are often used to generate code for serialization and deserialization of messages. This package defines a common representation in TypeScript for interface definitions, sometimes referred to as message definitions, so they can be reasoned about in a generic way. A concrete example of this is in [Foxglove Studio](https://github.com/foxglove/studio), which supports many different message serializations but provides common functionality across all of them such as [Message Path Syntax](https://foxglove.dev/docs/studio/app-concepts/message-path-syntax) and structured message display.
+Several interface definition languages exist today for describing the structure of messages. These languages are often used to generate code for serialization and deserialization of messages. This package defines a common representation in TypeScript for interface definitions, sometimes referred to as message definitions, so they can be reasoned about in a generic way. A concrete example of this is in [Foxglove](https://foxglove.dev/product), which supports many different message serializations but provides common functionality across all of them such as [Message Path Syntax](https://docs.foxglove.dev/docs/visualization/message-path-syntax/) and structured message display.
 
 ## Examples
 
@@ -55,4 +57,4 @@ Note that this package only provides type definitions, not any functionality for
 
 ## Stay in touch
 
-Join our [Slack channel](https://foxglove.dev/slack) to ask questions, share feedback, and stay up to date on what our team is working on.
+Join our [Discord community](https://foxglove.dev/chat) to ask questions, share feedback, and stay up to date on what our team is working on.
