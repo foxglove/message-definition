@@ -182,7 +182,7 @@ export type MessageDefinitionField = {
    */
   defaultValue?: DefaultValue;
 
-   /**
+  /**
    * Set to true if this field is marked as deprecated in the message definition.
    *
    * Some interface definition languages explicitly support deprecation metadata,
