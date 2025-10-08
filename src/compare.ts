@@ -48,6 +48,7 @@ export function isMsgDefFieldEqual(
     lhs.valueText === rhs.valueText &&
     lhs.upperBound === rhs.upperBound &&
     lhs.arrayUpperBound === rhs.arrayUpperBound &&
+    (lhs.deprecated ?? false) === (rhs.deprecated ?? false) &&
     defaultValuesEqual(lhs.defaultValue, rhs.defaultValue)
   );
 }
