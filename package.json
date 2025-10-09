@@ -1,6 +1,6 @@
 {
   "name": "@foxglove/message-definition",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Defines common types for message definition schemas (ROS .msg, Protobuf, FlatBuffers, IDL, PX4 ULog, JSON Schema, etc)",
   "license": "MIT",
   "repository": {
