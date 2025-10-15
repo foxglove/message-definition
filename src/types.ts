@@ -183,7 +183,7 @@ export type MessageDefinitionField = {
   defaultValue?: DefaultValue;
 
   /**
-   * Indicates whether this field is marked as deprecated in its message definition.
+   * Indicates whether this field is marked as deprecated.
    *
    * Some IDLs (e.g., Protobuf, FlatBuffers, JSON Schema) explicitly support deprecation metadata,
    * while others (such as ROS .msg or PX4 ULog) do not.
