@@ -183,20 +183,10 @@ export type MessageDefinitionField = {
   defaultValue?: DefaultValue;
 
   /**
-   * Set to true if this field is marked as deprecated in the message definition.
+   * Indicates whether this field is marked as deprecated.
    *
-   * Some interface definition languages explicitly support deprecation metadata,
-   * while others do not. For example:
-   *
-   * - In **Protobuf**, fields can be declared as deprecated using the `[deprecated = true]`
-   *   annotation in the `.proto` schema, which is reflected in the field descriptor.
-   * - In **FlatBuffers**, deprecation information is available through the
-   *   reflection schema (via the `deprecated` boolean flag on a `Field` object).
-   * - Other formats (e.g., some JSON-based schemas or older ROS message formats)
-   *   might not expose deprecation data at all.
-   *
-   * This flag can be used by tools or UIs to visually indicate deprecated fields
-   * (e.g., graying them out) or to exclude them from subscriptions and validation.
+   * Some IDLs (e.g., Protobuf, FlatBuffers, JSON Schema) explicitly support deprecation metadata,
+   * while others (such as ROS .msg or PX4 ULog) do not.
    */
   deprecated?: boolean;
 };
